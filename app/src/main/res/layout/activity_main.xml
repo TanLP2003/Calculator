@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/resultOutput"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/light_grey"
@@ -17,7 +18,6 @@
         android:text="@string/calc_text"
         android:textSize="80sp"
         android:textAlignment="viewEnd"
-
         android:textColor="@color/black"
         />
 
@@ -37,12 +37,14 @@
                 android:text="@string/ce"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onDelete"
                 />
             <TextView
                 android:id="@+id/btnC"
                 android:text="@string/c"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onClear"
                 />
             <TextView
                 android:id="@+id/btnBS"
@@ -55,6 +57,7 @@
                 android:text="@string/divide"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onOperator"
                 />
         </LinearLayout>
 
@@ -66,25 +69,28 @@
                 android:text="@string/_7"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
                 />
             <TextView
                 android:id="@+id/btn8"
                 android:text="@string/_8"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
                 />
             <TextView
                 android:id="@+id/btn9"
                 android:text="@string/_9"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
                 />
             <TextView
                 android:id="@+id/btnMultiply"
                 android:text="@string/multiply"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
-
+                android:onClick="onOperator"
                 />
         </LinearLayout>
 
@@ -96,24 +102,32 @@
                 android:text="@string/_4"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btn5"
                 android:text="@string/_5"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btn6"
                 android:text="@string/_6"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btnSubstract"
                 android:text="@string/sub"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onOperator"
+
                 />
         </LinearLayout>
 
@@ -125,24 +139,32 @@
                 android:text="@string/_1"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btn2"
                 android:text="@string/_2"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btn3"
                 android:text="@string/_3"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btnAdd"
                 android:text="@string/add"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onOperator"
+
                 />
         </LinearLayout>
 
@@ -160,18 +182,24 @@
                 android:text="@string/_0"
                 style="@style/CalcButton"
                 android:background="@color/numberBtn_bg"
+                android:onClick="onDigit"
+
                 />
             <TextView
                 android:id="@+id/btnDot"
                 android:text="@string/dot"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onDecimalPoint"
+
                 />
             <TextView
                 android:id="@+id/btnEqual"
                 android:text="@string/equal"
                 style="@style/CalcButton"
                 android:background="@color/light_grey"
+                android:onClick="onEqual"
+
                 />
         </LinearLayout>
     </LinearLayout>
